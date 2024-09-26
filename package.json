@@ -1,0 +1,7 @@
+{
+    "name": "sb-auth",
+    "author": "hexrw <github.com/hexrw>",
+    "workspaces": [
+        "packages/*"
+    ]
+}
