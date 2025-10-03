@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB-Auth Vue 3 Demo</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #242424;
+            color: #fff;
+        }
+        
+        h1 {
+            color: #646cff;
+        }
+        
+        .section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        
+        h2 {
+            color: #42b883;
+        }
+        
+        code {
+            background: #333;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎭 SB-Auth: Vue 3 Web Components</h1>
+    
+    <div class="section">
+        <h2>What is this?</h2>
+        <p>
+            This project now supports building web components with both <strong>Lit</strong> and <strong>Vue 3</strong>.
+            This page demonstrates the Vue 3 implementation.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Vue 3 Component Demo</h2>
+        <p>The component below is built with Vue 3 using <code>defineCustomElement</code>:</p>
+        <sb-auth-vue></sb-auth-vue>
+    </div>
+
+    <div class="section">
+        <h2>How to Use</h2>
+        <p>To use the Vue 3 web component in your project:</p>
+        
+        <h3>1. Install the package</h3>
+        <pre><code>npm install @hexrw/sb-auth</code></pre>
+
+        <h3>2. Import and register the component</h3>
+        <pre><code>import { registerVueComponent } from '@hexrw/sb-auth'
+
+// Register the Vue 3 component
+registerVueComponent()
+</code></pre>
+
+        <h3>3. Use in your HTML</h3>
+        <pre><code>&lt;sb-auth-vue&gt;&lt;/sb-auth-vue&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Key Benefits of Vue 3 Approach</h2>
+        <ul>
+            <li>✅ Familiar Vue syntax and composition API</li>
+            <li>✅ Reactive state management</li>
+            <li>✅ Single File Components (SFCs)</li>
+            <li>✅ Strong TypeScript support</li>
+            <li>✅ Rich ecosystem</li>
+        </ul>
+        
+        <h2>Trade-offs</h2>
+        <ul>
+            <li>⚠️ Larger bundle size (~16KB vs ~5KB for Lit)</li>
+            <li>⚠️ Virtual DOM overhead</li>
+            <li>⚠️ Some Vue features limited in custom elements</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Recommendation</h2>
+        <p>
+            <strong>Use Lit</strong> for production (default) - smaller, faster, built for web components.<br>
+            <strong>Use Vue 3</strong> if your team/project already uses Vue and you want consistent DX.
+        </p>
+        <p>
+            Both implementations are available. Choose based on your project needs!
+        </p>
+    </div>
+
+    <!-- Import the built components -->
+    <script type="module">
+        // In a real app, you would import from the npm package
+        // For demo purposes, we're showing what the code would look like
+        
+        import { registerVueComponent } from './dist/sb-auth.js'
+        
+        // Register the Vue component
+        registerVueComponent()
+        
+        console.log('Vue 3 component registered as <sb-auth-vue>')
+    </script>
+</body>
+</html>
