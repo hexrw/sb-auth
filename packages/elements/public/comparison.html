@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lit vs Vue 3 Web Components Comparison</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #242424;
+            color: #fff;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #646cff;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .component-wrapper {
+            border: 2px solid #646cff;
+            border-radius: 8px;
+            padding: 2rem;
+            background: #1a1a1a;
+        }
+        
+        .component-wrapper h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #42b883;
+        }
+        
+        .component-wrapper h2:first-of-type {
+            color: #646cff;
+        }
+        
+        .info {
+            background: #333;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .info strong {
+            color: #646cff;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎭 Web Components: Lit vs Vue 3</h1>
+    
+    <p style="text-align: center; color: #aaa;">
+        This demo shows the same counter component implemented with both Lit and Vue 3.
+    </p>
+
+    <div class="comparison">
+        <div class="component-wrapper">
+            <h2>Lit Implementation</h2>
+            <div class="info">
+                <strong>Bundle Size:</strong> ~5KB<br>
+                <strong>Approach:</strong> Direct DOM manipulation<br>
+                <strong>Tag:</strong> &lt;sb-auth&gt;
+            </div>
+            <sb-auth></sb-auth>
+        </div>
+
+        <div class="component-wrapper">
+            <h2>Vue 3 Implementation</h2>
+            <div class="info">
+                <strong>Bundle Size:</strong> ~16KB<br>
+                <strong>Approach:</strong> Virtual DOM with reactivity<br>
+                <strong>Tag:</strong> &lt;sb-auth-vue&gt;
+            </div>
+            <sb-auth-vue></sb-auth-vue>
+        </div>
+    </div>
+
+    <div style="margin-top: 3rem; padding: 2rem; background: #1a1a1a; border-radius: 8px;">
+        <h2>Key Differences</h2>
+        <ul>
+            <li><strong>Lit:</strong> Optimized for web components, smaller bundle, faster initial load</li>
+            <li><strong>Vue 3:</strong> Familiar to Vue developers, rich ecosystem, better DX for complex components</li>
+        </ul>
+        <p>
+            <strong>Recommendation:</strong> Use Lit for libraries and standalone components. 
+            Use Vue 3 if you're already in a Vue ecosystem.
+        </p>
+    </div>
+
+    <!-- Scripts will be added by build process -->
+    <script type="module">
+        // This would import the built components
+        // import './dist/sb-auth.js'
+        console.log('Demo page loaded. Build the project to see components in action.');
+    </script>
+</body>
+</html>
