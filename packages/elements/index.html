@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SB-Auth - Lit + Vue 3 Web Components</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: #242424;
+        color: #fff;
+      }
+
+      h1 {
+        text-align: center;
+        color: #646cff;
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #aaa;
+        margin-bottom: 3rem;
+      }
+
+      .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .card {
+        background: #1a1a1a;
+        border: 2px solid #333;
+        border-radius: 8px;
+        padding: 2rem;
+        transition: border-color 0.3s;
+      }
+
+      .card:hover {
+        border-color: #646cff;
+      }
+
+      .card h2 {
+        margin-top: 0;
+        color: #42b883;
+      }
+
+      .card p {
+        color: #aaa;
+        margin: 1rem 0;
+      }
+
+      .card a {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: #646cff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 1rem;
+        transition: background 0.3s;
+      }
+
+      .card a:hover {
+        background: #535bf2;
+      }
+
+      .info-box {
+        background: #1a1a1a;
+        border-left: 4px solid #42b883;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 4px;
+      }
+
+      .info-box h3 {
+        margin-top: 0;
+        color: #42b883;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .feature {
+        background: #2a2a2a;
+        padding: 1rem;
+        border-radius: 4px;
+      }
+
+      .feature strong {
+        color: #646cff;
+      }
+
+      code {
+        background: #333;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+        color: #ff6b6b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎭 SB-Auth Web Components</h1>
+    <p class="subtitle">
+      Authentication components built with <strong>Lit</strong> and <strong>Vue 3</strong>
+    </p>
+
+    <div class="info-box">
+      <h3>✨ Two Frameworks, One Library</h3>
+      <p>
+        This project demonstrates how to build web components using both Lit and Vue 3.
+        Choose the framework that best fits your project needs!
+      </p>
+    </div>
+
+    <div class="options">
+      <div class="card">
+        <h2>📊 Framework Comparison</h2>
+        <p>
+          See a detailed side-by-side comparison of the Lit and Vue 3 implementations,
+          including bundle sizes, performance characteristics, and developer experience.
+        </p>
+        <a href="/comparison.html">View Comparison →</a>
+      </div>
+
+      <div class="card">
+        <h2>🎨 Vue 3 Demo</h2>
+        <p>
+          Explore the Vue 3 web component implementation using <code>defineCustomElement</code>.
+          Includes usage examples and integration guide.
+        </p>
+        <a href="/vue-demo.html">Try Vue 3 →</a>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>📦 Bundle Sizes</h3>
+      <div class="features">
+        <div class="feature">
+          <strong>Lit:</strong> ~5KB gzipped<br>
+          Optimized for web components
+        </div>
+        <div class="feature">
+          <strong>Vue 3:</strong> ~16KB gzipped<br>
+          Familiar Vue ecosystem
+        </div>
+        <div class="feature">
+          <strong>Both:</strong> ~54KB gzipped<br>
+          Maximum flexibility
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>🚀 Quick Start</h3>
+      
+      <h4>Using Lit (Recommended for libraries)</h4>
+      <pre><code>import { SbAuth } from '@hexrw/sb-auth'
+// &lt;sb-auth&gt; automatically registered</code></pre>
+
+      <h4>Using Vue 3 (Great for Vue projects)</h4>
+      <pre><code>import { registerVueComponent } from '@hexrw/sb-auth'
+registerVueComponent()
+// &lt;sb-auth-vue&gt; now available</code></pre>
+    </div>
+
+    <div class="info-box">
+      <h3>📚 Documentation</h3>
+      <ul>
+        <li><strong>VUE3_COMPARISON.md</strong> - Technical comparison</li>
+        <li><strong>VUE3_README.md</strong> - Implementation guide</li>
+        <li><strong>IMPLEMENTATION_SUMMARY.md</strong> - Project overview</li>
+        <li><strong>PROJECT_STRUCTURE.md</strong> - File organization</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h3>💡 Recommendation</h3>
+      <p>
+        <strong>Use Lit</strong> as the primary implementation for production. It's smaller, faster,
+        and built specifically for web components.
+      </p>
+      <p>
+        <strong>Offer Vue 3</strong> as an alternative for projects already using Vue or teams
+        that prefer Vue's developer experience.
+      </p>
+    </div>
+
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
